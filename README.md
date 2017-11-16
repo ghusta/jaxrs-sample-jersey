@@ -18,3 +18,21 @@ Run the webapp with :
 
 NOTE: 
 Jetty 9 needs Java 8 !
+
+## Docker
+
+### Build
+
+> docker build -t jaxrs-sample-jersey .
+
+### Run
+
+> docker run -d --name jaxrs-test-1 -p 8090:8080 jaxrs-sample-jersey
+
+### Test
+
+Open a browser on http://localhost:8090/jax-sample-jersey/
+
+Or try :
+
+> curl -X GET http://localhost:8090/jax-sample-jersey/webapi/myresource
