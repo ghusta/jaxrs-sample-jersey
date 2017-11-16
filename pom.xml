@@ -47,6 +47,12 @@
             <artifactId>jersey-media-jaxb</artifactId>
         </dependency>
 
+        <!-- Support for Server Sent Events (text/event-stream) -->
+        <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-sse</artifactId>
+        </dependency>
+
         <!-- uncomment this to get JSON support
         <dependency>
             <groupId>org.glassfish.jersey.media</groupId>
