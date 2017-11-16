@@ -4,4 +4,4 @@ COPY . .
 RUN mvn install -DskipTests
 
 FROM jetty:9.4
-COPY --from=builder /usr/src/app/target/*.war "$JETTY_BASE/webapps/jax-sample-jersey.war"
+COPY --from=builder /usr/src/app/target/*.war "$JETTY_BASE/webapps/"

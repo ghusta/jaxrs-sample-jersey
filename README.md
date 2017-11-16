@@ -31,8 +31,8 @@ Jetty 9 needs Java 8 !
 
 ### Test
 
-Open a browser on http://localhost:8090/jax-sample-jersey/
+Open a browser on http://localhost:8090/jaxrs-sample-jersey/
 
 Or try :
 
-> curl -X GET http://localhost:8090/jax-sample-jersey/webapi/myresource
+> curl -X GET http://localhost:8090/jaxrs-sample-jersey/webapi/myresource
