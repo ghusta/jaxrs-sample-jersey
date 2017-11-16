@@ -21,11 +21,11 @@ Jetty 9 needs Java 8 !
 
 ## Docker
 
-### Build
+### Build an image
 
 > docker build -t jaxrs-sample-jersey .
 
-### Run
+### Run a container
 
 > docker run -d --name jaxrs-test-1 -p 8090:8080 jaxrs-sample-jersey
 
