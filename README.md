@@ -9,3 +9,12 @@ Sample project for testing JAX-RS 2.0 with Jersey 2.x
 Maven archetype used :
 
 > mvn archetype:generate -DarchetypeGroupId=org.glassfish.jersey.archetypes -DarchetypeArtifactId=jersey-quickstart-webapp -DarchetypeVersion=2.25.1 -DgroupId=fr.husta.test.jaxrs -DartifactId=jaxrs-sample-jersey -B
+
+## Run
+
+Run the webapp with :
+
+> mvn jetty:run
+
+NOTE: 
+Jetty 9 needs Java 8 !

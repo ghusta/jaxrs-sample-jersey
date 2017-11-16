@@ -46,7 +46,22 @@
 
     <build>
         <finalName>jaxrs-sample-jersey</finalName>
+        <pluginManagement>
+            <plugins>
+
+                <!-- Web Server Jetty -->
+                <!-- Needs Java 8 ! -->
+                <!-- See versions : https://wiki.eclipse.org/Jetty/Starting/Jetty_Version_Comparison_Table -->
+                <plugin>
+                    <groupId>org.eclipse.jetty</groupId>
+                    <artifactId>jetty-maven-plugin</artifactId>
+                    <version>9.4.7.v20170914</version>
+                </plugin>
+
+            </plugins>
+        </pluginManagement>
         <plugins>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -57,6 +72,24 @@
                     <target>1.7</target>
                 </configuration>
             </plugin>
+
+            <!-- Web Server Jetty -->
+            <!-- http://www.eclipse.org/jetty/documentation/current/jetty-maven-plugin.html -->
+            <!-- http://www.eclipse.org/jetty/documentation/current/jetty-classloading.html#adding-extra-classpaths -->
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <configuration>
+                    <httpConnector>
+                        <port>8095</port>
+                    </httpConnector>
+                    <webApp>
+                        <contextPath>/</contextPath>
+                        <extraClasspath>conf/</extraClasspath>
+                    </webApp>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 
