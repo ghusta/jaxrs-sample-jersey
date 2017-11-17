@@ -1,4 +1,4 @@
-package fr.husta.test.jaxrs;
+package fr.husta.test.jaxrs.text;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
