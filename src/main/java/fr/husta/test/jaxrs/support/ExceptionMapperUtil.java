@@ -10,6 +10,10 @@ public class ExceptionMapperUtil
     private ExceptionMapperUtil() {
     }
 
+    public static MediaType getRequestMediaType(final HttpHeaders headers) {
+        return headers.getMediaType();
+    }
+
     public static MediaType getResponseAcceptableType(final HttpHeaders headers) {
         List<MediaType> accepts = headers.getAcceptableMediaTypes();
         if (accepts != null && !accepts.isEmpty()) {
