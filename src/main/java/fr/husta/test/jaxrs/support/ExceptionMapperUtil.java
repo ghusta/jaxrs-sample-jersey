@@ -10,7 +10,7 @@ public class ExceptionMapperUtil
     private ExceptionMapperUtil() {
     }
 
-    public static MediaType getRequestMediaType(final HttpHeaders headers) {
+    public static MediaType getRequestEntityMediaType(final HttpHeaders headers) {
         return headers.getMediaType();
     }
 
