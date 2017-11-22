@@ -63,6 +63,11 @@ What is the use of certain HTTP headers ?
 | application/json
 |===
 
+== REST with Dropwizard
+
+- http://www.dropwizard.io/1.2.0/docs/index.html[Index]
+- http://www.dropwizard.io/1.2.0/docs/getting-started.html[Getting Started]
+
 == Docker
 
 === Build an image
