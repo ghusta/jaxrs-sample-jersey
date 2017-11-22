@@ -33,7 +33,6 @@ What is the use of certain HTTP headers ?
 
 === Request Headers
 
-[width="50%"]
 |===
 | HTTP Header | Use | JAX-RS Annotations | Example
 
