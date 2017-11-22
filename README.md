@@ -1,5 +1,7 @@
 # JAX-RS Sample : Jersey version
 
+[![Build Status](https://travis-ci.org/ghusta/swapi-java-client.svg?branch=master)](https://travis-ci.org/ghusta/jaxrs-sample-jersey)
+
 ## Overview
 
 Sample project for testing JAX-RS 2.0 with Jersey 2.x
