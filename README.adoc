@@ -1,0 +1,88 @@
+= JAX-RS Sample : Jersey version
+
+image:https://travis-ci.org/ghusta/jaxrs-sample-jersey.svg?branch=master["Build Status", link="https://travis-ci.org/ghusta/jaxrs-sample-jersey"]
+
+== Overview
+
+Sample project for testing JAX-RS 2.0 with Jersey 2.x
+
+== Project generation
+
+Maven archetype used :
+
+[source,shell]
+----
+mvn archetype:generate -DarchetypeGroupId=org.glassfish.jersey.archetypes -DarchetypeArtifactId=jersey-quickstart-webapp -DarchetypeVersion=2.25.1 -DgroupId=fr.husta.test.jaxrs -DartifactId=jaxrs-sample-jersey -B
+----
+
+== Run
+
+Run the webapp with :
+
+[source,shell]
+----
+mvn jetty:run
+----
+
+[NOTE]
+Jetty 9 needs Java 8 !
+
+== REST with JAX-RS
+
+What is the use of certain HTTP headers ?
+
+=== Request Headers
+
+[width="50%"]
+|===
+| HTTP Header | Use | JAX-RS Annotations | Example
+
+| `Accept`
+| Used to set the preference for the content type of the response body. Can have multiple values. If unsuitable, server will send a HTTP 406.
+| `@Produces`
+| application/json,application/xml
+
+| `Content-Type`
+| Used to precise the content type for the request body.
+| `@Consumes`
+| application/json
+|===
+
+=== Response Headers
+
+[width="50%"]
+|===
+| HTTP Header | Use | JAX-RS Annotations | Example
+
+| `Content-Type`
+| Used to precise the content type for the response body. No header if no content.
+| Depends on `@Accept` and https://en.wikipedia.org/wiki/Content_negotiation[Content negotiation]
+| application/json
+|===
+
+== Docker
+
+=== Build an image
+
+[source,shell]
+----
+docker build -t jaxrs-sample-jersey .
+----
+
+=== Run a container
+
+[source,shell]
+----
+docker run -d –name jaxrs-test-1 -p 8090:8080 jaxrs-sample-jersey
+----
+
+=== Test
+
+Open a browser on http://localhost:8090/jaxrs-sample-jersey/[http://localhost:8090/jaxrs-sample-jersey/]
+
+Or try :
+
+[source,shell]
+----
+curl -X GET http://localhost:8090/jaxrs-sample-jersey/webapi/myresource[http://localhost:8090/jaxrs-sample-jersey/webapi/myresource]
+----
