@@ -51,7 +51,6 @@ What is the use of certain HTTP headers ?
 
 === Response Headers
 
-[width="50%"]
 |===
 | HTTP Header | Use | JAX-RS Annotations | Example
 
