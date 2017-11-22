@@ -2,6 +2,9 @@
 
 image:https://travis-ci.org/ghusta/jaxrs-sample-jersey.svg?branch=master["Build Status", link="https://travis-ci.org/ghusta/jaxrs-sample-jersey"]
 
+:toc: auto
+:toclevels: 2
+
 == Overview
 
 Sample project for testing JAX-RS 2.0 with Jersey 2.x
@@ -85,3 +88,5 @@ Or try :
 ----
 curl -X GET http://localhost:8090/jaxrs-sample-jersey/webapi/myresource[http://localhost:8090/jaxrs-sample-jersey/webapi/myresource]
 ----
+
+_Generated with Asciidoctor {asciidoctor-version}_
