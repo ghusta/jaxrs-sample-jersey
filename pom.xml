@@ -85,7 +85,7 @@
     </dependencies>
 
     <build>
-        <finalName>jaxrs-sample-jersey</finalName>
+        <finalName>${project.artifactId}</finalName>
         <pluginManagement>
             <plugins>
 
