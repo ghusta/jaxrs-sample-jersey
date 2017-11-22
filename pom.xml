@@ -4,62 +4,65 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>fr.husta.test.jaxrs</groupId>
-    <artifactId>jaxrs-sample-jersey</artifactId>
+    <artifactId>jaxrs-sample-dropwizard</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>jaxrs-sample-jersey</name>
+    <name>jaxrs-sample-dropwizard</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <jersey.version>2.25.1</jersey.version>
         <slf4j.version>1.7.25</slf4j.version>
+        <dropwizard.version>1.2.0</dropwizard.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>org.glassfish.jersey</groupId>
-                <artifactId>jersey-bom</artifactId>
-                <version>${jersey.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
+            <!--<dependency>-->
+                <!--<groupId>org.glassfish.jersey</groupId>-->
+                <!--<artifactId>jersey-bom</artifactId>-->
+                <!--<version>${jersey.version}</version>-->
+                <!--<type>pom</type>-->
+                <!--<scope>import</scope>-->
+            <!--</dependency>-->
         </dependencies>
     </dependencyManagement>
 
     <dependencies>
-        <dependency>
-            <groupId>org.glassfish.jersey.containers</groupId>
-            <!-- if your container implements Servlet API older than 3.0, use "jersey-container-servlet-core"  -->
-            <!--<artifactId>jersey-container-servlet-core</artifactId>-->
 
-            <!-- use the following artifactId if you don't need servlet 2.x compatibility -->
-            <artifactId>jersey-container-servlet</artifactId>
+        <!-- DropWizard -->
+        <!-- http://www.dropwizard.io/1.2.0/docs/getting-started.html -->
+        <dependency>
+            <groupId>io.dropwizard</groupId>
+            <artifactId>dropwizard-core</artifactId>
+            <version>${dropwizard.version}</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.glassfish.jersey.media</groupId>
-            <artifactId>jersey-media-json-jackson</artifactId>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.glassfish.jersey.containers</groupId>-->
+            <!--&lt;!&ndash; if your container implements Servlet API older than 3.0, use "jersey-container-servlet-core"  &ndash;&gt;-->
+            <!--&lt;!&ndash;<artifactId>jersey-container-servlet-core</artifactId>&ndash;&gt;-->
 
-        <dependency>
-            <groupId>org.glassfish.jersey.media</groupId>
-            <artifactId>jersey-media-jaxb</artifactId>
-        </dependency>
+            <!--&lt;!&ndash; use the following artifactId if you don't need servlet 2.x compatibility &ndash;&gt;-->
+            <!--<artifactId>jersey-container-servlet</artifactId>-->
+        <!--</dependency>-->
 
-        <!-- Support for Server Sent Events (text/event-stream) -->
-        <dependency>
-            <groupId>org.glassfish.jersey.media</groupId>
-            <artifactId>jersey-media-sse</artifactId>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.glassfish.jersey.media</groupId>-->
+            <!--<artifactId>jersey-media-json-jackson</artifactId>-->
+        <!--</dependency>-->
 
-        <!-- uncomment this to get JSON support
-        <dependency>
-            <groupId>org.glassfish.jersey.media</groupId>
-            <artifactId>jersey-media-moxy</artifactId>
-        </dependency>
-        -->
+        <!--<dependency>-->
+            <!--<groupId>org.glassfish.jersey.media</groupId>-->
+            <!--<artifactId>jersey-media-jaxb</artifactId>-->
+        <!--</dependency>-->
+
+        <!--&lt;!&ndash; Support for Server Sent Events (text/event-stream) &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.glassfish.jersey.media</groupId>-->
+            <!--<artifactId>jersey-media-sse</artifactId>-->
+        <!--</dependency>-->
 
         <!-- LOGGING -->
         <dependency>
@@ -85,7 +88,7 @@
     </dependencies>
 
     <build>
-        <finalName>jaxrs-sample-jersey</finalName>
+        <finalName>${project.artifactId}</finalName>
         <pluginManagement>
             <plugins>
 
