@@ -1,8 +1,10 @@
 = JAX-RS Sample : Jersey version
-:toc: auto
+:toc: manual
 :toclevels: 2
 
 image:https://travis-ci.org/ghusta/jaxrs-sample-jersey.svg?branch=master["Build Status", link="https://travis-ci.org/ghusta/jaxrs-sample-jersey"]
+
+toc::[]
 
 == Overview
 
