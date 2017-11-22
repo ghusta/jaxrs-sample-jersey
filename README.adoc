@@ -42,12 +42,12 @@ What is the use of certain HTTP headers ?
 | HTTP Header | Use | JAX-RS Annotations | Example
 
 | `Accept`
-| Used to set the preference for the content type of the response body. Can have multiple values. If unsuitable, server will send a HTTP 406.
+| Used to set the preference for the content type of the *response body*. Can have multiple values. If unsuitable, server will send a HTTP 406.
 | `@Produces`
 | application/json,application/xml
 
 | `Content-Type`
-| Used to precise the content type for the request body.
+| Used to precise the content type of the *request body*.
 | `@Consumes`
 | application/json
 |===
@@ -58,7 +58,7 @@ What is the use of certain HTTP headers ?
 | HTTP Header | Use | JAX-RS Annotations | Example
 
 | `Content-Type`
-| Used to precise the content type for the response body. No header if no content.
+| Used to precise the content type of the *response body*. No header if no content.
 | Depends on `@Accept` and https://en.wikipedia.org/wiki/Content_negotiation[Content negotiation]
 | application/json
 |===
