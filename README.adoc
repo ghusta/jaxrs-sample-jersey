@@ -13,11 +13,11 @@ Sample project for testing JAX-RS 2.0 with Jersey 2.x
 
 == Project generation
 
-Maven archetype used :
+Maven archetype used (https://github.com/dropwizard/dropwizard/tree/master/dropwizard-archetypes[dropwizard-archetypes]) :
 
 [source,shell]
 ----
-mvn archetype:generate -DarchetypeGroupId=org.glassfish.jersey.archetypes -DarchetypeArtifactId=jersey-quickstart-webapp -DarchetypeVersion=2.25.1 -DgroupId=fr.husta.test.jaxrs -DartifactId=jaxrs-sample-jersey -B
+mvn archetype:generate -DarchetypeGroupId=io.dropwizard.archetypes -DarchetypeArtifactId=java-simple -DarchetypeVersion=1.2.0 -DgroupId=fr.husta.test.jaxrs -DartifactId=jaxrs-sample-jersey -B
 ----
 
 == Run
