@@ -68,6 +68,17 @@ What is the use of certain HTTP headers ?
 - http://www.dropwizard.io/1.2.0/docs/index.html[Index]
 - http://www.dropwizard.io/1.2.0/docs/getting-started.html[Getting Started]
 
+== JAX-RS with Jersey
+
+I use https://jersey.github.io/[Jersey] as the https://github.com/jax-rs[JAX-RS] implementation.
+
+Up to Jersey 2.25, Java 6 and JAX-RS 2.0 (https://jcp.org/en/jsr/detail?id=339[JSR-339]) are required.
+
+As of Jersey 2.26, there are https://jersey.github.io/documentation/latest/migration.html#mig-2.26[important changes] :
+
+- Requires Java 8
+- Use JAX-RS 2.1 (https://jcp.org/en/jsr/detail?id=370[JSR-370])
+
 == Docker
 
 === Build an image
