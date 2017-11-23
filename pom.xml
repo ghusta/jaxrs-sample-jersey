@@ -40,43 +40,23 @@
         </dependency>
 
         <!--<dependency>-->
-            <!--<groupId>org.glassfish.jersey.containers</groupId>-->
-            <!--&lt;!&ndash; if your container implements Servlet API older than 3.0, use "jersey-container-servlet-core"  &ndash;&gt;-->
-            <!--&lt;!&ndash;<artifactId>jersey-container-servlet-core</artifactId>&ndash;&gt;-->
-
-            <!--&lt;!&ndash; use the following artifactId if you don't need servlet 2.x compatibility &ndash;&gt;-->
-            <!--<artifactId>jersey-container-servlet</artifactId>-->
-        <!--</dependency>-->
-
-        <!--<dependency>-->
             <!--<groupId>org.glassfish.jersey.media</groupId>-->
             <!--<artifactId>jersey-media-json-jackson</artifactId>-->
         <!--</dependency>-->
 
-        <!--<dependency>-->
-            <!--<groupId>org.glassfish.jersey.media</groupId>-->
-            <!--<artifactId>jersey-media-jaxb</artifactId>-->
-        <!--</dependency>-->
-
-        <!--&lt;!&ndash; Support for Server Sent Events (text/event-stream) &ndash;&gt;-->
+        <!-- Support for Server Sent Events (text/event-stream) -->
         <!--<dependency>-->
             <!--<groupId>org.glassfish.jersey.media</groupId>-->
             <!--<artifactId>jersey-media-sse</artifactId>-->
         <!--</dependency>-->
 
         <!-- LOGGING -->
+        <!-- NOTE : DropWizard embeds logback-classic -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>${slf4j.version}</version>
         </dependency>
-        <!-- DropWizard embeds logback-classic -->
-        <!--<dependency>-->
-            <!--<groupId>org.slf4j</groupId>-->
-            <!--<artifactId>slf4j-simple</artifactId>-->
-            <!--<version>${slf4j.version}</version>-->
-            <!--<scope>runtime</scope>-->
-        <!--</dependency>-->
 
         <!-- Tests -->
         <dependency>
